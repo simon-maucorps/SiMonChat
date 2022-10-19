@@ -12,7 +12,7 @@ export const environment = {
   minWord:3,
   testMessageNumber:10,
 
-  aboutLink:'https://github.com/simon-maucorps/SiMonChat'
+  aboutLink:'https://github.com/simon-maucorps/SiMonChat/blob/main/README.md'
 };
 
 /*
