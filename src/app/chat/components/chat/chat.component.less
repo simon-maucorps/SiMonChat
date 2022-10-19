@@ -1,0 +1,71 @@
+@import (reference) "../../../variable.less";
+.chat
+{
+    border-radius: 10px;
+    background-color: @chat-color;
+    min-height: 400px;
+    width: 400px;
+    margin: 20px;
+    position: relative;
+    
+    .chatHeader {
+        border-radius: 10px 10px 0px  0px;
+        padding: 20px;
+        background-color: @main-color;
+        color: white;
+        border-bottom: 1px solid black;    
+        span {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    .chatContent {
+        padding: 20px;
+        display: block;
+        overflow-y: auto;
+        max-height: 50vh;
+    }
+
+    .text-to-add {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        align-self:flex-end;
+        td:first-child {
+            width: 100%;
+            textarea {                
+                width: 95%;
+            }
+        }
+    }
+    .sendImage {
+        margin: 0px 5px;
+        height: 30px;
+    }
+    .ask-user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+        input {            
+            width: 70%;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            box-shadow: 1px 1px 1px rgba(black, .3);            
+            border: none;
+            outline: none;       
+
+            &:focus{
+                border: 1px solid @main-color;
+                outline: none;
+            }
+        }
+        img {
+            height: 30px;
+            cursor: pointer;
+        }
+    }
+}
+
+

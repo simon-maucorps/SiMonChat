@@ -1,0 +1,33 @@
+
+<div class="chat">    
+    <ng-container *ngIf="!isInit()">
+        <div class="chatHeader">
+            <span>
+                Chat
+            </span>
+        </div>
+        <div class="ask-user">
+            <input type="text" [(ngModel)]="userName" (keyup.enter)="initiateUserChat()" placeholder="Merci de renseigner votre nom" />
+            <img src="assets/img/check.png" (click)="initiateUserChat()">
+        </div>        
+    </ng-container>
+    <ng-container *ngIf="isInit()">    
+        <div class="chatHeader">
+            <span>
+                {{chat.user.name}}
+            </span>
+        </div>
+        <div class="chatContent" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+            <div *ngFor="let message of chatService.messageList">
+                <app-message [message]="message" [IsMine]="message.from == chat.user"></app-message>
+            </div>
+        </div>
+        <div style="height: 60px;"></div>
+        <table class="text-to-add">
+            <tr>
+                <td><textarea [(ngModel)]="text" (keyup.enter)="addMessage()" placeholder="Saisissez votre message ici"></textarea></td>
+                <td *ngIf="text"><img src="assets/img/send.png" (click)="addMessage()" class="pointer sendImage"></td>
+            </tr>
+        </table>
+    </ng-container>
+</div>

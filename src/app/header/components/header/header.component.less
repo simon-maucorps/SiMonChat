@@ -1,0 +1,56 @@
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: aliceblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+img {
+    margin: 5px 10px;
+    height: 30px;
+    cursor: pointer;
+}
+td div{
+    margin: 5px 15px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;  
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center-top;
+}
+
+.chat
+{
+    div {
+        background-image: url('/assets/img/chat.png');
+    }
+    &.is-active {
+        div {
+        background-image: url('/assets/img/chat-selected.png');    
+        }
+    }
+}
+.about
+{
+    div {
+        background-image: url('/assets/img/about.png');
+    }
+    &.is-active {
+        div {
+            background-image: url('/assets/img/about-selected.png');    
+        }
+    }
+}
+.home
+{
+    div {
+        background-image: url('/assets/img/home.png');
+    }
+    &.is-active {
+        div {
+            background-image: url('/assets/img/home-selected.png');    
+        }
+    }
+}

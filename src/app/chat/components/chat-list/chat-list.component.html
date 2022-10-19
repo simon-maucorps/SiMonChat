@@ -1,0 +1,13 @@
+<div>
+    <table>
+        <tr>
+            <td *ngFor="let chat of chatService.chatList">
+                <app-chat [chat]="chat"></app-chat>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <button (click)="clearChatList()" class="large-button" style="margin-right: 20px;">Clear</button>
+    <button (click)="testChat()" class="large-button">testChat</button>
+</div>

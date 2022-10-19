@@ -1,0 +1,9 @@
+<div class="header">
+<table>
+    <tr>
+        <td *ngFor="let module of moduleList" [routerLink]="['/'+module.route]" [routerLinkActive]="['is-active']" [ngClass]="module.name">
+            <div></div>
+        </td>
+    </tr>
+</table>
+</div>

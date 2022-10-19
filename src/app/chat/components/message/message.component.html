@@ -1,0 +1,11 @@
+<div class="messageLine" [ngClass]="IsMine ? 'mine' : ''">
+    <div class="from">
+        <span *ngIf="IsMine">Moi</span>
+        <span *ngIf="!IsMine">{{message.from.name}}</span>
+    </div>
+    <div class="message">
+        <span class="text" >{{message.message}}</span>
+        <span class="date" [title]="message.date | date:'HH\'h\'mm \'le\' dd/MM/yyyy'" >{{message.date | dateAgo}}</span>
+    </div>
+
+</div>
